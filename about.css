@@ -190,12 +190,16 @@ nav ul li a:hover {
    
 .about1, .about2, .about3 {
 background: #030f27;
+font-family: 'Rancho', cursive;
+font-size: 25px;
     box-shadow: 0 7px 8px 0 rgba(0,0,0,0.8), 0 10px 10px 0 rgba(0,0,0,0.8);
 
 }
 .services {
-height:200px;
+height:280px;
 width: 100%;
+font-family: 'Rancho', cursive;
+font-size: 25px;
   background: white;
     box-shadow: 0 7px 8px 0 rgba(0,0,0,0.8), 0 10px 10px 0 rgba(0,0,0,0.8); 
 }
