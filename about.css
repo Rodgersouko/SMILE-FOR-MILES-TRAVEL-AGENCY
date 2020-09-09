@@ -203,3 +203,7 @@ font-size: 25px;
   background: white;
     box-shadow: 0 7px 8px 0 rgba(0,0,0,0.8), 0 10px 10px 0 rgba(0,0,0,0.8); 
 }
+.animals {
+  font-weight: bold;
+  font-size: 25px;
+}
