@@ -4,11 +4,6 @@ html body {
   background-size: cover;
 }
 #about{
-    /* background-image: url("./images/image2.jpg");
-    background-size: cover;
-    background-repeat: no-repeat; */
-    /* width: 1500px;
-    height: 800px; */
     padding: 50px;
     text-align: center;
     font-family: serif;
@@ -50,32 +45,29 @@ nav {
 nav ul {
   text-align: center;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
-  background-color:black;
-  opacity: 40%;
+  /* background-color:black;
+  opacity: 40%; */
 }
 
 nav ul li {
   display: inline-block;
-  color: white;
 }
 
 nav ul li a {
-  padding: 18px;
-  font-family: "Open Sans";
-  text-transform:uppercase;
-<<<<<<< HEAD:styles.css
-  color: blac
-=======
-  color: black;                  
->>>>>>> 18cfe41651c79408e949c999fb72c3a48ba2d691:css/styles.css
-  font-size: 18px;
-  text-decoration: none;
-  display: block;
+    padding: 18px;
+    font-family: "Open Sans";
+    text-transform:uppercase;
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
 }
 
-nav ul li a:hover {
-  text-underline-position: above;
-}
+  nav ul li a:hover {
+    background: white;
+    border-radius: 5px;
+    color: blue;
+  }
 
 img{
     width: 900px;
