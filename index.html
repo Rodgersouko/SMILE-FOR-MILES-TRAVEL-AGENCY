@@ -13,27 +13,71 @@
     <div>
       <nav>
         <ul>
-           <li>
-                <a href="#">Home</a>
+            <li>
+                <a style="color: white;" href="#">Home</a>
             </li>
             <li>
-                <a href="#">About</a>
+                <a style="color: white;"href="#">About</a>
             </li>
             <li>
-                <a href="#">Destinations</a>
+                <a style="color: white;"href="#">Destinations</a>
             </li>
             <li>
-                <a href="#">Accomodation</a>
+                <a style="color: white;"href="#">Accomodation</a>
             </li>
             <li>
-                <a href="#">Contacts</a>
+                <a style="color: white;"href="#">Contacts</a>
             </li>
         </ul>
       </nav>
     </div>
-    <div class="container-fluid"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
-    <div class="footer">
-       
+    <div class="container-fluid">
+        <div class="container-fluid" id="about"><br><br>
+            <div class="home"><br><br><br>
+                <h1 style="color: white;">SMILE FOR MILES TRAVEL AGENCY</h1>
+                <h2 style="color: white;">SIMPLY THE BEST ...<br><br>BOOK WITH US<br>NOW!!!<br>
+                    <br<br><br><br><br>
+                </h2>
+                <div id="mouse">
+                    <a href="#">
+                        <P style="color: white;"> GET UPTO 50% REDUCED CHARGES THIS HOLIDAY!!</P>
+                    </a>
+                </div><br><br>
+                
+            </div><br><br>
+            <div class="col-md-12" style="text-align: center; background-color: rgb(84, 59, 221);"><br>
+                <div class="mySlides">
+                    <a href="#"><img src="./images/tour.jpg" alt="Destination"></a><br>
+                    <h3 style="color: white;"></h3>
+                </div>
+                <div class="mySlides">
+                    <a href="#"><img src="./images/Mamba.jpeg" alt="Destination"></a><br>
+                    <h3 style="color: white;"></h3>
+                </div>
+                <div class="mySlides">
+                    <a href="#"><img src="./images/image3.jpg" alt="Destination"></a><br>
+                    <h3 style="color: white;"></h3>
+                </div>
+                <div class="mySlides">
+                    <a href="#"><img src="./images/Nairobi.jpg" alt="Destination"></a><br>
+                    <h3 style="color: white;"></h3>
+                </div>
+                <div class="mySlides">
+                    <a href="#"><img src="./images/image1.jpg" alt="Destination"></a><br>
+                    <h3 style="color: white;"></h3>
+                </div><br><br>
+                <div style="text-align:center">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="col-md-"></div>
+        </div><br>
+    </div>
+    <div class="footer"> 
         <footer class="site-footer">
             <div class="container-fluid">
                 <div class="row">
@@ -89,5 +133,26 @@
             </div>
         </footer>
     </div>
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 5 seconds
+        }
+    </script>
 </body>
 </html>

@@ -3,6 +3,43 @@ html body {
   background-image: url(./images/image2.jpg);
   background-size: cover;
 }
+#about{
+    /* background-image: url("./images/image2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; */
+    /* width: 1500px;
+    height: 800px; */
+    padding: 50px;
+    text-align: center;
+    font-family: serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.home{
+    background-color: black;
+    opacity: 60%;
+    border-radius: 5px;
+}
+
+}#mouse{
+    padding-top : 20px;
+    margin-top: 20px;
+    padding-bottom: 20px; 
+    width: 10px;
+    height: 10px;
+    /* animation-iteration-count: infinite; */
+  }
+  #mouse {
+    animation: bounce 2s infinite;
+  }@keyframes bounce {
+    40% {
+      transform: translateY(-50px);
+    }
+    60% {
+      transform: translateY(-30px);
+    }
+  }
 
 nav {
   max-width: 1000px;
@@ -13,26 +50,33 @@ nav {
 nav ul {
   text-align: center;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  background-color:black;
+  opacity: 40%;
 }
 
 nav ul li {
   display: inline-block;
+  color: white;
 }
 
 nav ul li a {
   padding: 18px;
   font-family: "Open Sans";
   text-transform:uppercase;
-  color: black
+  color: blac
   font-size: 18px;
   text-decoration: none;
   display: block;
 }
 
 nav ul li a:hover {
-  background: white;
-  border-radius: 5px;
-  color: blue;
+  text-underline-position: above;
+}
+
+img{
+    width: 800px;
+    height: 400px;
+    border-radius:solod black 5px;
 }
 
 
