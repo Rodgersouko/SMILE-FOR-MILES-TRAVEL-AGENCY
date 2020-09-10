@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Book Now</title>
+  <link rel="stylesheet" href="../css/Accomodation.css">
+  <link rel="stylesheet" href="../css/links/style-Arrangement.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <script>
+
+    function validateForm() {
+
+      validateName('firstname');
+
+
+      validateName('lastname');
+
+
+      validateEmailAddress('email');
+
+
+      validateSelect('room');
+
+
+      validateSelect('guest');
+
+
+      validateSelect('children');
+
+      validateSelect('day');
+      validateSelect('month');
+      validateSelect('year');
+      validateSelect('hour');
+      validateSelect('timePeriod');
+
+
+      validateSelect('departure_day');
+      validateSelect('departure_month');
+      validateSelect('departure_year');
+      validateSelect('departure_hour');
+      validateSelect('timeperiodDeparture');
+
+
+
+      validateSelect('freePickUp');
+
+
+      validatePassportNumber('freePickUp');
+    }
+
+
+    function validateEmailAddress(email) {
+
+      var email = document.getElementById(email);
+      if (email.value === "") {
+        alert("Your Email Address must be filled out");
+        return false;
+      } else {
+        l
+        var regExpEmail =
+          /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (!regExpEmail.test(email.value)) {
+          alert("Email is not in correct format");
+          email.focus();
+          return false;
+        }
+      }
+    }
+
+    function validateName(targetId) {
+
+      var name = document.getElementById(targetId);
+      var regExpFirstName = /^[A-Z][a-z]+$/;
+      if (name.value === "") {
+        alert(targetId + " must be filled out");
+        return false;
+      } else {
+        if (!regExpFirstName.test(name.value)) {
+          alert("Please enter " + targetId + " in correct format");
+          name.focus();
+          return false;
+        }
+      }
+    }
+
+    function validateSelect(select) {
+
+      var dropdown = document.getElementById(select);
+      if (dropdown.value === "-1") {
+        alert("Please select any options from " + select);
+        return false;
+      }
+    }
+
+
+    function validatePassportNumber(number) {
+      var passportNo = document.getElementById(targetId);
+      var regExPassportNumber = /^(?!^0+$)[a-zA-Z0-9]{3,20}$/;
+
+      if (passportNo.value === "") {
+        alert("Passport Number must be filled out");
+        return false;
+      } else {
+        if (!regExPassportNumber.test(passportNo.value)) {
+          alert("Please enter passport number in correct format");
+          passportNo.focus();
+          return false;
+        }
+      }
+    }
+
+  </script>
+</head>
+
+<body>
+  <div>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Destinations</a>
+        </li>
+        <li>
+          <a href="#">Accomodation</a>
+        </li>
+        <li>
+          <a href="#">Contacts</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <article class="main">
+    <div style="padding: 15px 15px 15px 15px;">
+      <form action="" method="post" id="book_reservation" onsubmit="validateForm()">
+        <div class="form-all">
+          <ul>
+
+            <br>
+            <li>
+              <h1 class="form-header" style="color: whitesmoke">
+
+              </h1>
+            </li>
+            <br>
+
+
+            <li>
+              <label>Name</label>
+              <span> *</span>
+              <div>
+                <input type="text" id="firstname" placeholder="First Name" required style="margin-top: 3px;">
+                <input type="text" id="lastname" placeholder="Last Name" required style="margin-top: 10px;">
+              </div>
+            </li>
+            <br>
+
+
+            <li>
+              <label>Email</label>
+              <span> *</span>
+              <div>
+                <input type="text" id="email" required placeholder="Email Address" size="30">
+              </div>
+            </li>
+            <br>
+
+
+            <li>
+              <label>Room Type</label>
+              <span> *</span>
+              <div>
+                <select name="roomtype" id="room" required>
+                  <option selected disabled value="-1">Pick a room</option>
+                  <option value="1">Ambassador Suite</option>
+                  <option value="2">Junior Suite</option>
+                  <option value="3">Premium Suite</option>
+                  <option value="5">Premium Suite</option>
+                  <option value="4">Family Room</option>
+                  <option value="6">Premium Plus</option>
+                </select>
+              </div>
+            </li>
+            <br>
+
+
+            <li>
+              <label>Number of Guests</label>
+              <span> *</span>
+              <div>
+                <select name="guest" id="guest" required>
+                  <option selected disabled value="-1">Number of Guest</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="5">4</option>
+                  <option value="4">5</option>
+                  <option value="6">6</option>
+                </select>
+              </div>
+            </li>
+            <br>
+
+
+            <li>
+              <label>Number of Childrens</label>
+              <span> *</span>
+              <div>
+                <select name="guest" id="children" required>
+                  <option selected disabled value="-1">Number of Children</option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="5">4</option>
+                  <option value="4">5</option>
+                  <option value="6">6</option>
+                </select>
+              </div>
+            </li>
+            <br>
+
+
+            <li>
+              <label>Arrival Date & Time</label>
+              <span> *</span>
+
+              <div>
+                <span>
+                  <select aria-label="Day" id="day" title="Day" autocomplete="on" required>
+                    <option value="-1" selected disabled="">Day</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                  </select>
+                  <select aria-label="Month" id="month" title="Month" autocomplete="on" required>
+                    <option value="-1" selected disabled>Month</option>
+                    <option value="1">Jan</option>
+                    <option value="2">Feb</option>
+                    <option value="3">Mar</option>
+                    <option value="4">Apr</option>
+                    <option value="5">May</option>
+                    <option value="6">Jun</option>
+                    <option value="7">Jul</option>
+                    <option value="8">Aug</option>
+                    <option value="9">Sep</option>
+                    <option value="10">Oct</option>
+                    <option value="11">Nov</option>
+                    <option value="12">Dec</option>
+                  </select>
+                  <select aria-label="Year" id="year" title="Year" autocomplete="on" required>
+                    <option value="-1" selected disabled="">Year</option>
+                    <option value="2020">2020</option>
+                  </select>
+                </span>
+
+                <span class="date-separate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+
+
+                <select class="currentTime" id="hour" required>
+                  <option value="-1" selected disabled>Hour</option>
+                  <option value="1"> 1 </option>
+                  <option value="2"> 2 </option>
+                  <option value="3"> 3 </option>
+                  <option value="4"> 4 </option>
+                  <option value="5"> 5 </option>
+                  <option value="6"> 6 </option>
+                  <option value="7"> 7 </option>
+                  <option value="8"> 8 </option>
+                  <option value="9"> 9 </option>
+                  <option value="10"> 10 </option>
+                  <option value="11"> 11 </option>
+                  <option value="12"> 12 </option>
+                </select>
+                <span class="date-separate">&nbsp;:</span>
+
+                <span style="vertical-align:top">
+                  <select id="timePeriod" required>
+                    <option value="-1" selected disabled>AM & PM</option>
+                    <option value="AM"> AM </option>
+                    <option value="PM"> PM </option>
+                  </select>
+                </span>
+              </div>
+            </li>
+            <br>
+
+
+            <li>
+              <label>Departure Date & Time</label>
+              <span> *</span>
+
+              <div>
+                <span>
+                  <select aria-label="Day" id="departure_day" title="Day" autocomplete="on" required>
+                    <option value="-1" selected disabled="">Day</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                  </select>
+                  <select aria-label="Month" id="departure_month" title="Month" autocomplete="on" required>
+                    <option value="-1" selected disabled>Month</option>
+                    <option value="1">Jan</option>
+                    <option value="2">Feb</option>
+                    <option value="3">Mar</option>
+                    <option value="4">Apr</option>
+                    <option value="5">May</option>
+                    <option value="6">Jun</option>
+                    <option value="7">Jul</option>
+                    <option value="8">Aug</option>
+                    <option value="9">Sep</option>
+                    <option value="10">Oct</option>
+                    <option value="11">Nov</option>
+                    <option value="12">Dec</option>
+                  </select>
+                  <select aria-label="Year" id="departure_year" title="Year" autocomplete="on" required>
+                    <option value="-1" selected disabled="">Year</option>
+                    <option value="2020">2020</option>
+                  </select>
+                </span>
+
+                <span class="date-separate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+
+
+                <select class="currentTime" id="departure_hour" required>
+                  <option value="-1" selected disabled>Hour</option>
+                  <option value="1"> 1 </option>
+                  <option value="2"> 2 </option>
+                  <option value="3"> 3 </option>
+                  <option value="4"> 4 </option>
+                  <option value="5"> 5 </option>
+                  <option value="6"> 6 </option>
+                  <option value="7"> 7 </option>
+                  <option value="8"> 8 </option>
+                  <option value="9"> 9 </option>
+                  <option value="10"> 10 </option>
+                  <option value="11"> 11 </option>
+                  <option value="12"> 12 </option>
+                </select>
+                <span class="date-separate">&nbsp;:</span>
+
+                <span style="vertical-align:top">
+                  <select id="timeperiodDeparture" required>
+                    <option value="-1" selected disabled>AM & PM</option>
+                    <option value="AM"> AM </option>
+                    <option value="PM"> PM </option>
+                  </select>
+                </span>
+              </div>
+            </li>
+            <br>
+
+            <li>
+              <label>Free Pickup</label>
+              <span> *</span>
+              <div>
+                <span style="vertical-align:top">
+                  <select id="freePickUp" required>
+                    <option value="-1" selected disabled>Free Pickup</option>
+                    <option value="AM"> Yes Please! - Pick me up on arrival </option>
+                    <option value="PM"> No Thanks - I'll make my own way there </option>
+                  </select>
+                </span>
+              </div>
+            </li>
+            <br>
+
+            <li>
+              <label>Identification Number</label>
+              <span> *</span>
+              <div>
+                <input type="text" placeholder="A11163131" required>
+              </div>
+            </li>
+            <br>
+
+            <li>
+              <label>Special Request [ Optional ]</label>
+              <div>
+                <textarea class="form-textarea" cols="35" rows="4" data-component="textarea"
+                  placeholder="Additional Information"></textarea>
+              </div>
+            </li>
+            <br>
+
+            <li>
+              <button style="font-size: 15pt; border-color: #3e61a0">Submit</button>
+            </li>
+            <br><br>
+          </ul>
+        </div>
+      </form>
+    </div>
+  </article>
+
+
+  <!-- <aside class="aside aside-1" style="color: #FFFFFF">.</aside>
+
+
+
+  <aside class="aside aside-2" style="color: #FFFFFF">.</aside> -->
+
+  <!-- <div class="container-fluid"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div> -->
+  <div class="footer">
+
+    <footer class="site-footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>OUR TEAM</h6>
+            <ul>
+              <li>Dorcas</li>
+              <li>Kiptoo</li>
+              <li>Stacy</li>
+              <li>Jeff</li>
+              <li>Rodgers</li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Travel Tips</h6>
+            <ul class="footer-links">
+              <li><a href="#">Mombasa Kenya</a></li>
+              <li><a href="#">Western Kenya</a></li>
+              <li><a href="#">Nairobi Kenya</a></li>
+              <li><a href="#">Central Kenya</a></li>
+              <li><a href="#">Nyanza kenya</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Destination</a></li>
+              <li><a href="#">Accomodation</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2020 SMILE FOR MILES TRAVEL AGENCY</p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
