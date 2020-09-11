@@ -58,7 +58,7 @@ body {
     background: whitesmoke;
     padding-right: 280px;
     box-shadow: 0 0 15px goldenrod;
-    background-image: url(/images/cha.jpg);
+    background-image: url("../images/cha.jpg");
     background-size: cover;
 }
 

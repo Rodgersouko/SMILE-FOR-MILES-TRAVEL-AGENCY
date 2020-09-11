@@ -27,7 +27,8 @@ html body {
   }
   #mouse {
     animation: bounce 2s infinite;
-  }@keyframes bounce {
+  }
+  @keyframes bounce {
     40% {
       transform: translateY(-50px);
     }
